@@ -1,0 +1,16 @@
+{
+  "name": "sakugabooru2nipongoatf",
+  "version": "0.0.1",
+  "description": "",
+  "main": "sakugabooru2nipongoatf.user.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0"
+  }
+}
