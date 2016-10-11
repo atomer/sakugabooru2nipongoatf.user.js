@@ -5,15 +5,12 @@
 // @include	 https://feedly.com/*
 // @version	 0.1
 // ==/UserScript==
-((window, loaded) => {
-    var win = null;
+(function(window, loaded) {
     if (!loaded) {
-        let fn = "(" + arguments.callee.toString() + ")(this,true);";
-        let script = document.createElement("script");
+        var fn = "(" + arguments.callee.toString() + ")(this,true);";
+        var script = document.createElement("script");
         script.appendChild(document.createTextNode(fn));
         document.body.appendChild(script);
         return;
-    } else {
-        win = window;
     }
     
