@@ -1,23 +1,4 @@
-// ==UserScript==
-// @name		sakugabooru to nipongo @ feedly
-// @namespace   https://github.com/atomer
-// @description 
-// @include	 https://feedly.com/*
-// @version	 0.1
-// ==/UserScript==
-
-((window, loaded) => {
-    var win = null;
-    if (!loaded) {
-        let fn = "(" + arguments.callee.toString() + ")(this,true);";
-        let script = document.createElement("script");
-        script.appendChild(document.createTextNode(fn));
-        document.body.appendChild(script);
-        return;
-    } else {
-        win = window;
-    }
-
+module.exports = function() {
     function replace(titles) {
         [].forEach.apply(titles, [(el) => {
             let text = el.textContent.toLowerCase();
@@ -29,7 +10,7 @@
             }
         }]);
     }
-    const NIPONGO_MAP = {};
+    const NIPONGO_MAP = require("./map");
     function getMap(text) {
         return text;
     }
@@ -49,4 +30,4 @@
         characterData: true
     };
     observer.observe(feedlyPage, config);
-})();
+};
