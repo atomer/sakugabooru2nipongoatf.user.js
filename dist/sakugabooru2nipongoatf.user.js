@@ -1,4 +1,19 @@
-/******/ (function(modules) { // webpackBootstrap
+// ==UserScript==
+// @name		sakugabooru to nipongo @ feedly
+// @namespace   https://github.com/atomer
+// @description 
+// @include	 https://feedly.com/*
+// @version	 0.1
+// ==/UserScript==
+(function(window, loaded) {
+    if (!loaded) {
+        var fn = "(" + arguments.callee.toString() + ")(this,true);";
+        var script = document.createElement("script");
+        script.appendChild(document.createTextNode(fn));
+        document.body.appendChild(script);
+        return;
+    }
+    /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -148,3 +163,4 @@
 
 /***/ }
 /******/ ]);
+})();
